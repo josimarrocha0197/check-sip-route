@@ -29,12 +29,14 @@ hostReference="Addr->IP"
 # Define o "campo" relativo a saida do comando 'sip show peer' que sera considerado para obter o "status de qualify"
 qualifyReference="Status"
 
-# Expressao regular usada para validar se o valor armazenado em "hostReference" eh um IP
+# Expressao regular usada para validar se determinado valor eh um IP
 regexIpAddr="\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
 
+# Printa o resultado das operacoes realizadas na funcaoo validateConnection
 function printResult () {
-        echo -e "Outra ponta SIP: ${ipPeer} \n"
-        echo -e "Comunicação: ${peerStatus} \n \n"
+		echo -e "Recurso: ${recursoSip}\n"
+        echo -e "Outra ponta SIP: ${ipPeer}\n"
+        echo -e "Comunicação: ${peerStatus}\n\n"
 
         echo -e "Rota: ${ipPeer} -> ${router}\n"
         echo -e "Status da rota: ${routeStatus}\n"
