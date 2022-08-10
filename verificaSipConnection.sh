@@ -9,8 +9,18 @@
 # Configuracoes basicas do script
 myVersion="20220801"
 
+# Imprime versão do script (--help ou -h)
+# @param ${1} --version ou -v
+function version (){
+        if [[ $1 == --version || $1 == -v ]]
+        then
+                        echo -e "Versão do script: ${myVersion}"
+                        exit
+        fi
+}
+
 # Imprime instrucoes de uso (--help ou -h)
-#
+# @param ${1} --help ou -h
 function helper (){
         if [[ $1 == --help || $1 == -h ]]
         then
@@ -22,7 +32,7 @@ function helper (){
         fi
 }
 
-# Variaveis estaticas
+# Variaveis globais
 # Define o "campo" relativo a saida  do comando 'sip show peer' que sera considerado para obter o "host"
 hostReference="Addr->IP"
 
@@ -33,6 +43,7 @@ qualifyReference="Status"
 regexIpAddr="\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
 
 # Printa o resultado das operacoes realizadas na funcaoo validateConnection
+#
 function printResult () {
 		echo -e "Recurso: ${recursoSip}\n"
         echo -e "Outra ponta SIP: ${ipPeer}\n"
