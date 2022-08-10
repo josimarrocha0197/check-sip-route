@@ -3,11 +3,11 @@
 # Escallo: verificaSipTrunk.sh
 #
 # @author Josimar Rocha <josimar@futurotec.com.br>
-# @version 20220801
+# @version 20220809
 ################################################################################
 
 # Configuracoes basicas do script
-myVersion="20220801"
+myVersion="20220809"
 
 # Imprime versão do script (--help ou -h)
 # @param ${1} --version ou -v
