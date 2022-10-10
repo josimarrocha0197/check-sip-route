@@ -14,7 +14,7 @@ myVersion="20220809"
 function version (){
         if [[ $1 == --version || $1 == -v ]]
         then
-                        echo -e "Versão do script: ${myVersion}"
+                        echo -e "Versao do script: ${myVersion}"
                         exit
         fi
 }
@@ -69,7 +69,7 @@ function validateConnection () {
 	# Valida se o valor do campo "Addr->IP" eh "(Unspecified)"
 	if [[ $ipPeer == "(Unspecified)" ]]
 	then
-		echo -e "O recurso é uma extensão válida, mas nao há conexao do UA com a conta SIP"
+		echo -e "O recurso é uma extensao valida, mas nao ha conexao do UA com a conta SIP"
 		exit
 	else
 		# Valida se o valor do campo "Addr->IP" corresponde a um endereco IP (com base no regex definido nas variaveis estaticas)
