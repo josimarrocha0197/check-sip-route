@@ -25,8 +25,8 @@ function helper (){
         if [[ $1 == --help || $1 == -h ]]
         then
                         echo -e "\nModo de utilizacao:\n"
-                        echo -e "./verificaSipConnection.sh recurso\n"
-                        echo -e "Exemplo: ./verificaSipConnection.sh sip_trunk_vivo\n"
+                        echo -e "./checkSipRoute.sh recurso\n"
+                        echo -e "Exemplo: ./checkSipRoute.sh sip_trunk_vivo\n"
                         echo -e "Dica: pegue o recurso definido no tronco cadastrado na interface web\n"
                         exit
         fi
